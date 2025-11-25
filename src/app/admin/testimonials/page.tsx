@@ -2,11 +2,6 @@
 import { useState, useEffect, useCallback } from 'react'
 import { supabase, type Testimonial } from '../../../../lib/supabase'
 
-interface User {
-  id: string
-  email?: string
-}
-
 export default function AdminDashboard() {
   const [testimonials, setTestimonials] = useState<Testimonial[]>([])
   const [loading, setLoading] = useState(true)
@@ -130,7 +125,7 @@ export default function AdminDashboard() {
           ].map(({ key, label, color }) => (
             <button
               key={key}
-              onClick={() => setFilter(key as any)}
+              onClick={() => setFilter(key as 'all' | 'pending' | 'approved' | 'rejected')}
               className={`px-4 py-2 rounded-lg font-medium ${
                 filter === key
                   ? `bg-${color}-600 text-white`
@@ -149,7 +144,7 @@ export default function AdminDashboard() {
             { status: 'approved', label: 'מאושרות', color: 'green' },
             { status: 'rejected', label: 'נדחות', color: 'red' },
             { status: 'all', label: 'סך הכל', color: 'blue' }
-          ].map(({ status, label, color }) => {
+          ].map(({ status, label, color }: { status: string; label: string; color: string }) => {
             const count = status === 'all' 
               ? testimonials.length 
               : testimonials.filter(t => t.status === status).length

@@ -26,7 +26,7 @@ export default function TermsOfUse() {
               <section>
                 <h2 className="text-2xl font-bold text-gray-800 mb-4">תנאי שימוש באתר</h2>
                 <p className="text-gray-700 leading-relaxed mb-4">
-                  ברוכים הבאים לאתר מרפאת רונן (להלן: "האתר") מאת מרפאת רונן (להלן: "בעל האתר").
+                  ברוכים הבאים לאתר מרפאת רונן (להלן: &quot;האתר&quot;) מאת מרפאת רונן (להלן: "בעל האתר").
                 </p>
                 <p className="text-gray-700 leading-relaxed mb-4">
                   בעל האתר פועל על מנת להבטיח כי המידע באתר זה יהיה מדויק ושלם, אולם בעל האתר אינו אחראי לכל 

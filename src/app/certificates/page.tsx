@@ -3,6 +3,7 @@
 import Header from '@/components/Header'
 import Footer from '@/components/Footer'
 import Image from 'next/image'
+import Link from 'next/link'
 import { useState } from 'react'
 
 // Certificate data with Hebrew names for each certificate
@@ -180,13 +181,13 @@ export default function CertificatesPage() {
 
           {/* Back to About Button */}
           <div className="text-center">
-            <a
+            <Link
               href="/#about"
               className="inline-flex items-center bg-white text-gray-800 px-8 py-4 rounded-lg hover:bg-gray-100 transition-colors duration-300 font-semibold"
             >
               חזרה לעמוד אודות
               <span className="mr-2">🔙</span>
-            </a>
+            </Link>
           </div>
         </div>
       </main>

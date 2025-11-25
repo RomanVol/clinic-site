@@ -1,3 +1,5 @@
+import Link from 'next/link'
+
 export default function Footer() {
   return (
     <footer className="bg-gray-800 text-white py-12">
@@ -17,29 +19,29 @@ export default function Footer() {
             <h4 className="text-lg font-semibold mb-4">קישורים מהירים</h4>
             <ul className="space-y-3">
               <li>
-                <a href="/#hero" className="text-gray-300 hover:text-white transition duration-300">
+                <Link href="/#hero" className="text-gray-300 hover:text-white transition duration-300">
                   בית
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="/#services" className="text-gray-300 hover:text-white transition duration-300">
+                <Link href="/#services" className="text-gray-300 hover:text-white transition duration-300">
                   טיפולים
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="/#about" className="text-gray-300 hover:text-white transition duration-300">
+                <Link href="/#about" className="text-gray-300 hover:text-white transition duration-300">
                   אודות
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="/#testimonials" className="text-gray-300 hover:text-white transition duration-300">
+                <Link href="/#testimonials" className="text-gray-300 hover:text-white transition duration-300">
                   המלצות
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="/#contact" className="text-gray-300 hover:text-white transition duration-300">
+                <Link href="/#contact" className="text-gray-300 hover:text-white transition duration-300">
                   צור קשר
-                </a>
+                </Link>
               </li>
             </ul>
           </div>

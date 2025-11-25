@@ -41,7 +41,7 @@ export default function Hero() {
             className="bg-gradient-to-r from-cream-50 to-white border-2 border-green-200 text-green-700 px-8 py-4 rounded-lg font-bold hover:from-green-50 hover:to-cream-50 hover:border-green-300 transition-all duration-300 text-lg shadow-md hover:shadow-lg"
           >
             👨‍⚕️ למד על הטיפולים
-          </a>
+          </a>.
         </div>
 
         {/* Statistics */}

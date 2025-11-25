@@ -5,7 +5,6 @@ import Link from 'next/link'
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
-  const [isAccessibilityOpen, setIsAccessibilityOpen] = useState(false)
   const [fontSize, setFontSize] = useState('medium')
   const [highContrast, setHighContrast] = useState(false)
 

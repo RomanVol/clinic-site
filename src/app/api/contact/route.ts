@@ -6,7 +6,7 @@ export async function POST(request: NextRequest) {
     const { name, phone, email, message, consultationRequest } = await request.json()
 
     // Create transporter (you'll need to configure with real email service)
-    const transporter = nodemailer.createTransporter({
+    const transporter = nodemailer.createTransport({
       service: 'gmail', // or 'outlook', 'yahoo', etc.
       auth: {
         user: process.env.EMAIL_USER, // your-clinic-email@gmail.com
