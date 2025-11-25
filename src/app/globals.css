@@ -2,25 +2,171 @@
 
 :root {
   --background: #ffffff;
-  --foreground: #171717;
-}
-
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --foreground: #2c3e50;
+  --primary: #3498db;
+  --primary-hover: #2980b9;
+  --secondary: #27ae60;
+  --accent: #e74c3c;
+  --muted: #ecf0f1;
+  --border: #bdc3c7;
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    --background: #1a202c;
+    --foreground: #e2e8f0;
+    --muted: #2d3748;
+    --border: #4a5568;
   }
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-heebo), 'Segoe UI', Tahoma, Arial, sans-serif;
+  line-height: 1.6;
+}
+
+/* RTL Support */
+[dir="rtl"] {
+  text-align: right;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--muted);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--primary);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--primary-hover);
+}
+
+/* Smooth scroll */
+html {
+  scroll-behavior: smooth;
+}
+
+/* WhatsApp Animations */
+@keyframes fade-in {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-in {
+  animation: fade-in 0.3s ease-out;
+}
+
+/* WhatsApp pulse animation */
+@keyframes whatsapp-pulse {
+  0% {
+    box-shadow: 0 0 0 0 rgba(34, 197, 94, 0.7);
+  }
+  70% {
+    box-shadow: 0 0 0 10px rgba(34, 197, 94, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(34, 197, 94, 0);
+  }
+}
+
+.animate-whatsapp-pulse {
+  animation: whatsapp-pulse 2s infinite;
+}
+
+/* Accessibility Features */
+
+/* Font Size Classes */
+.text-small {
+  font-size: 0.875rem; /* 14px */
+}
+
+.text-small h1 { font-size: 2rem; }
+.text-small h2 { font-size: 1.75rem; }
+.text-small h3 { font-size: 1.5rem; }
+.text-small p, .text-small div { font-size: 0.875rem; }
+
+.text-medium {
+  font-size: 1rem; /* 16px - default */
+}
+
+.text-large {
+  font-size: 1.125rem; /* 18px */
+}
+
+.text-large h1 { font-size: 4rem; }
+.text-large h2 { font-size: 3rem; }
+.text-large h3 { font-size: 2rem; }
+.text-large p, .text-large div { font-size: 1.125rem; }
+
+/* High Contrast Mode */
+.high-contrast {
+  filter: contrast(150%);
+}
+
+.high-contrast * {
+  background-color: white !important;
+  color: black !important;
+  border-color: black !important;
+}
+
+.high-contrast a {
+  color: #0000EE !important;
+  text-decoration: underline !important;
+}
+
+.high-contrast button {
+  background-color: yellow !important;
+  color: black !important;
+  border: 2px solid black !important;
+}
+
+/* Screen Reader Only */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+.focus\:not-sr-only:focus {
+  position: static;
+  width: auto;
+  height: auto;
+  padding: 0.5rem 1rem;
+  margin: 0;
+  overflow: visible;
+  clip: auto;
+  white-space: normal;
+}
+
+/* Enhanced Focus Indicators */
+*:focus {
+  outline: 3px solid #3b82f6 !important;
+  outline-offset: 2px !important;
+}
+
+/* Keyboard Navigation */
+.focus-visible:focus {
+  outline: 3px solid #3b82f6;
+  outline-offset: 2px;
 }
