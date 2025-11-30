@@ -68,7 +68,7 @@ export default function Hero() {
           onClick={() => setIsVideoOpen(false)}
         >
           <div 
-            className="relative w-full max-w-4xl aspect-video"
+            className="relative w-full max-w-md aspect-[9/16]"
             onClick={(e) => e.stopPropagation()}
           >
             <button
@@ -80,10 +80,11 @@ export default function Hero() {
             </button>
             <iframe
               className="w-full h-full rounded-lg"
-              src="https://www.youtube.com/shorts/yum8pWH2dZ4?autoplay=1"
+              src="https://www.youtube-nocookie.com/embed/yum8pWH2dZ4?autoplay=1&rel=0"
               title="YouTube video player"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
               allowFullScreen
+              referrerPolicy="strict-origin-when-cross-origin"
             />
           </div>
         </div>
