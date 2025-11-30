@@ -80,7 +80,7 @@ export default function Hero() {
             </button>
             <iframe
               className="w-full h-full rounded-lg"
-              src="https://www.youtube.com/embed/l9iNdVwIIhU?autoplay=1"
+              src="https://www.youtube.com/shorts/yum8pWH2dZ4?autoplay=1"
               title="YouTube video player"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
               allowFullScreen
