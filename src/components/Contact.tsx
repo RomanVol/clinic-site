@@ -165,14 +165,14 @@ ${formData.message || 'לא צוינה הודעה מיוחדת'}
               <div className="flex items-center">
                 <span className="text-2xl ml-4">📞</span>
                 <div>
-                  <div className="font-medium">052-553-3295</div>
+                  <div className="font-medium text-black">052-553-3295</div>
                   <div className="text-gray-600 text-sm">זמין לשיחות ווואטסאפ</div>
                 </div>
               </div>
               <div className="flex items-start">
                 <span className="text-2xl ml-4">📍</span>
                 <div>
-                  <div className="font-medium">רח׳ אריה בן אליעזר 32</div>
+                  <div className="font-medium text-black">רח׳ אריה בן אליעזר 32</div>
                   <div className="text-gray-600 text-sm">ראשון לציון</div>
                 </div>
               </div>
