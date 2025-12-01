@@ -1,3 +1,19 @@
+import type { Metadata } from 'next'
+
+export const metadata: Metadata = {
+  title: "טיפול בכאבי גב ופריצת דיסק | מרפאת רונן ראשון לציון",
+  description: "טיפול מקצועי בכאבי גב, פריצת דיסק, איסיאלגיה וכאבי חוליות בראשון לציון. 15+ שנות ניסיון, עיסוי רקמות עמוק, מנואלית תרפיה. התקשרו: 052-553-3295",
+  keywords: ["טיפול בכאבי גב", "פריצת דיסק", "כאבי גב תחתון", "איסיאלגיה", "סיאטיקה", "ראשון לציון"],
+  openGraph: {
+    title: "טיפול בכאבי גב ופריצת דיסק | מרפאת רונן",
+    description: "טיפול מקצועי בכאבי גב, פריצת דיסק וכאבי חוליות. תוצאות מוכחות.",
+    url: "https://ronenmerape.co.il/services/back-pain",
+  },
+  alternates: {
+    canonical: "/services/back-pain",
+  },
+}
+
 import Link from 'next/link'
 import Header from '@/components/Header'
 import Footer from '@/components/Footer'
@@ -116,9 +132,4 @@ export default function BackPainPage() {
       <Footer />
     </>
   )
-}
-
-export const metadata = {
-  title: "טיפול בכאבי גב ופציעות - מרפאת רונן",
-  description: "טיפול מקצועי בכאבי גב, פריצת דיסק, איסיאלגיה וכאבי חוליות. גישה הוליסטית משולבת עם תוצאות מוכחות."
 }
