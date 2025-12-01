@@ -113,26 +113,205 @@ html {
 .text-large h3 { font-size: 2rem; }
 .text-large p, .text-large div { font-size: 1.125rem; }
 
-/* High Contrast Mode */
-.high-contrast {
-  filter: contrast(150%);
+/* Dark Mode Styles - Global */
+.dark {
+  --background: #111827;
+  --foreground: #f3f4f6;
+  --primary: #60a5fa;
+  --primary-hover: #3b82f6;
+  --secondary: #34d399;
+  --accent: #f87171;
+  --muted: #1f2937;
+  --border: #374151;
 }
 
-.high-contrast * {
-  background-color: white !important;
-  color: black !important;
-  border-color: black !important;
+.dark body {
+  background-color: #111827 !important;
+  color: #f3f4f6 !important;
 }
 
-.high-contrast a {
-  color: #0000EE !important;
-  text-decoration: underline !important;
+/* Global dark mode overrides for all bg-white elements */
+.dark .bg-white,
+.dark [class*="bg-white"] {
+  background-color: #1f2937 !important;
 }
 
-.high-contrast button {
-  background-color: yellow !important;
-  color: black !important;
-  border: 2px solid black !important;
+.dark .bg-gray-50,
+.dark [class*="bg-gray-50"] {
+  background-color: #111827 !important;
+}
+
+.dark .bg-gray-100,
+.dark [class*="bg-gray-100"] {
+  background-color: #1f2937 !important;
+}
+
+.dark .bg-blue-50,
+.dark [class*="bg-blue-50"] {
+  background-color: #1e3a5f !important;
+}
+
+.dark .bg-blue-100,
+.dark [class*="bg-blue-100"] {
+  background-color: #1e3a5f !important;
+}
+
+.dark .bg-green-50,
+.dark [class*="bg-green-50"] {
+  background-color: #064e3b !important;
+}
+
+.dark .bg-red-50,
+.dark [class*="bg-red-50"] {
+  background-color: #450a0a !important;
+}
+
+/* Dark mode text colors */
+.dark .text-gray-900,
+.dark .text-gray-800,
+.dark .text-gray-700,
+.dark [class*="text-gray-900"],
+.dark [class*="text-gray-800"],
+.dark [class*="text-gray-700"] {
+  color: #f3f4f6 !important;
+}
+
+.dark .text-gray-600,
+.dark .text-gray-500,
+.dark [class*="text-gray-600"],
+.dark [class*="text-gray-500"] {
+  color: #d1d5db !important;
+}
+
+.dark .text-amber-900,
+.dark .text-amber-800,
+.dark .text-amber-700,
+.dark [class*="text-amber"] {
+  color: #fcd34d !important;
+}
+
+.dark .text-stone-700,
+.dark .text-stone-600,
+.dark .text-stone-800 {
+  color: #e5e7eb !important;
+}
+
+.dark .text-red-800,
+.dark .text-red-700,
+.dark .text-red-600 {
+  color: #fca5a5 !important;
+}
+
+.dark .text-green-800,
+.dark .text-green-700 {
+  color: #86efac !important;
+}
+
+/* Dark mode borders */
+.dark .border-gray-200,
+.dark .border-gray-300,
+.dark .border-stone-200,
+.dark .border-gray-700,
+.dark [class*="border-gray"],
+.dark [class*="border-stone"] {
+  border-color: #374151 !important;
+}
+
+.dark .border-red-200 {
+  border-color: #991b1b !important;
+}
+
+.dark .border-green-200 {
+  border-color: #166534 !important;
+}
+
+/* Dark mode for cards and sections */
+.dark .shadow-lg,
+.dark [class*="shadow-lg"] {
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.4), 0 4px 6px -2px rgba(0, 0, 0, 0.3) !important;
+}
+
+/* Dark mode for gradients */
+.dark .bg-gradient-to-r {
+  background: linear-gradient(to right, #374151, #4b5563) !important;
+}
+
+.dark .from-yellow-100,
+.dark .from-cream-50,
+.dark .to-cream-50,
+.dark .from-stone-100,
+.dark .to-amber-50,
+.dark .from-stone-200,
+.dark .to-amber-100 {
+  background: linear-gradient(to right, #374151, #4b5563) !important;
+}
+
+/* Dark mode for specific components */
+.dark .from-orange-200,
+.dark .to-cream-100 {
+  background: linear-gradient(to right, #92400e, #78350f) !important;
+  color: #ffffff !important;
+}
+
+.dark .text-orange-800 {
+  color: #ffffff !important;
+}
+
+.dark .from-green-200,
+.dark .to-stone-100 {
+  background: linear-gradient(to right, #166534, #14532d) !important;
+}
+
+/* Dark mode for form inputs */
+.dark input,
+.dark textarea,
+.dark select {
+  background-color: #374151 !important;
+  border-color: #4b5563 !important;
+  color: #f3f4f6 !important;
+}
+
+.dark input::placeholder,
+.dark textarea::placeholder {
+  color: #9ca3af !important;
+}
+
+.dark input:focus,
+.dark textarea:focus,
+.dark select:focus {
+  border-color: #60a5fa !important;
+  outline-color: #60a5fa !important;
+}
+
+/* Dark mode for footer (already dark, make it darker) */
+.dark .bg-gray-800,
+.dark [class*="bg-gray-800"] {
+  background-color: #030712 !important;
+}
+
+.dark .bg-gray-700,
+.dark [class*="bg-gray-700"] {
+  background-color: #111827 !important;
+}
+
+/* Dark mode scrollbar */
+.dark ::-webkit-scrollbar-track {
+  background: #1f2937;
+}
+
+.dark ::-webkit-scrollbar-thumb {
+  background: #4b5563;
+}
+
+.dark ::-webkit-scrollbar-thumb:hover {
+  background: #6b7280;
+}
+
+/* Smooth transitions for theme changes */
+*,
+*::before,
+*::after {
+  transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
 }
 
 /* Screen Reader Only */

@@ -12,11 +12,13 @@ export default function Home() {
   return (
     <div className="min-h-screen">
       <Header />
-      <Hero />
-      <Services />
-      <About />
-      <Testimonials />
-      <Contact />
+      <main id="main-content">
+        <Hero />
+        <Services />
+        <About />
+        <Testimonials />
+        <Contact />
+      </main>
       <Footer />
       
       {/* Advanced WhatsApp Button with Business Hours */}
