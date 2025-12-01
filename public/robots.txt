@@ -1,0 +1,12 @@
+# Robots.txt for Clinic Site
+# https://ronenmerape.co.il
+
+User-agent: *
+Allow: /
+
+# Sitemap location
+Sitemap: https://ronenmerape.co.il/sitemap.xml
+
+# Disallow admin pages
+Disallow: /admin/
+Disallow: /api/
