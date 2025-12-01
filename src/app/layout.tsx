@@ -77,7 +77,7 @@ export const metadata: Metadata = {
 
   // Verification (add your actual codes)
   verification: {
-    google: 'YOUR_GOOGLE_VERIFICATION_CODE', // Replace with actual code from Google Search Console
+    google: 'q5J9HuOmmmAFT5xaswfTOV6DwcR0nAC--VGb5J5ljZM',
   },
 
   // Canonical URL
